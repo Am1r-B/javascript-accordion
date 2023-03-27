@@ -34,9 +34,10 @@ body {
   border-bottom: 1px solid #000;
 
   position: relative;
+  transition: 0.5s;
 }
 
-.accordion .content-container .question:after {
+.accordion .content-container .question::after {
   content: "+";
 
   position: absolute;
@@ -52,4 +53,20 @@ body {
   height: 0;
   overflow: hidden;
   transition: 0.5s;
+}
+
+/* JavaScript Styling Link */
+
+.accordion .content-container.active .answer {
+  height: 150px;
+}
+
+.accordion .content-container.active .question {
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.accordion .content-container.active .question::after {
+  content: "-";
+  font-size: 30px;
 }
